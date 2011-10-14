@@ -82,7 +82,6 @@
             [parser release];
             
             if([[itemView.array objectForKey:@"author"] length] != 0) {
-                self.navigationController.navigationBar.topItem.title = @"Назад";
                 [self.navigationController pushViewController:itemView animated:YES];
                 [itemView release];                
             }            
