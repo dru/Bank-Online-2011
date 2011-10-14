@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Bank Online 2011
+
+  Created by Dmitry Krasnoukhov on 10/11/11.
+  Copyright 2011 Unteleported. All rights reserved.
+*/
+
+"Map Address" = "ул. Шолуденка 3";
+"Map Description" = "Кубик центр";
+
+"Organizers" = "Организаторы";
+"Sponsors" = "Спонсоры";
+"Associate sponsor" = "Ассоциированный спонсор";
+"Partners" = "Партнеры";
+"Networking Partner" = "Networking Partner";
+"Main Internet Partner" = "Главный интернет-партнер";
+"Mediapartners" = "Медиапартнеры";
