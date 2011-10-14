@@ -711,6 +711,7 @@
 				GCC_PREFIX_HEADER = "Bank/Bank Online 2011-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Bank/Bank Online 2011-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Bank Online 2011";
 				WRAPPER_EXTENSION = app;
 			};
@@ -723,6 +724,7 @@
 				GCC_PREFIX_HEADER = "Bank/Bank Online 2011-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Bank/Bank Online 2011-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Bank Online 2011";
 				WRAPPER_EXTENSION = app;
 			};
