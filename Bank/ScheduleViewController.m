@@ -188,12 +188,12 @@
         NSDate *date_end = [NSDate dateWithTimeIntervalSince1970:[end doubleValue]];
 
         NSDateFormatter *dateFormatStart = [[NSDateFormatter alloc] init];
-        [dateFormatStart setDateFormat:@"hh:mm"];
+        [dateFormatStart setDateFormat:@"HH:mm"];
         NSString *str_start = [dateFormatStart stringFromDate:date_start];
         [dateFormatStart release];
 
         NSDateFormatter *dateFormatEnd = [[NSDateFormatter alloc] init];
-        [dateFormatEnd setDateFormat:@"hh:mm"];
+        [dateFormatEnd setDateFormat:@"HH:mm"];
         NSString *str_end = [dateFormatEnd stringFromDate:date_end];
         [dateFormatEnd release];
 
