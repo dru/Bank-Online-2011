@@ -215,7 +215,6 @@
             
             ScheduleItemView *itemView = [[ScheduleItemView alloc] initWithNibName:@"ScheduleItemView" bundle:nil];
             
-            self.navigationController.navigationBar.topItem.title = @"Назад";
             itemView.array = array;
             
             [self.navigationController pushViewController:itemView animated:YES];

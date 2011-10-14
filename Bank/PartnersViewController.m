@@ -51,6 +51,7 @@
         [NSArray arrayWithObjects:
             [NSArray arrayWithObjects:@"3_uelbu.jpg", @"http://www.uelbu.org/", nil],
             [NSArray arrayWithObjects:@"3_ema.png", @"http://www.ema.com.ua/", nil],
+            [NSArray arrayWithObjects:@"3_uamaster.jpg", @"http://uamaster.com/", nil],
          nil] forKey:@"Partners"];        
         [self.listOfItems addObject:partners];
 
@@ -161,7 +162,6 @@
         NSDictionary *dictionary = [self.listOfItems objectAtIndex:indexPath.section];
         NSArray *array = [dictionary objectForKey:@"Partners"];
         webView.currentUrl = [[array objectAtIndex:indexPath.row] objectAtIndex:1];
-        self.navigationController.navigationBar.topItem.title = @"Назад";
         
         [self.navigationController pushViewController:webView animated:YES];
         [webView release];
