@@ -19,38 +19,33 @@
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
-    
-    NSString *filePath = nil;
-    NSString *fileContent = nil;
-    NSError *error = nil;
-    
-    filePath = [[NSBundle mainBundle] pathForResource:NSLocalizedString(@"data", @"") ofType:@"json"];
-    fileContent = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
-    
-    
+        
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewDataMethod) name:@"newDataAvailable" object:nil];
     
-    return YES;
-}
-
-- (BOOL)isNewDataAvailable {
-    NSError *error = nil;
-    NSString *response = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://kitapps.com/getApplicationVersion/OIFF"]
-                                                  encoding:NSUTF8StringEncoding
-                                                     error:&error];
-    if (error) {
-        NSLog(@"error %@", [error localizedDescription]);
-        return NO;
+    if ([[Configuration shared] isNewDataAvailable]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"newDataAvailable" object:nil];
     }
     
-//    NSDictionary *dict = [NSDictionary dictionaryWithDictionary:[response JSONValue]];
-//    if ([[configurationDict objectForKey:@"version"] floatValue] == [[dict objectForKey:@"version"] floatValue]) {
-//        return NO;
-//    }
-    
     return YES;
 }
 
+- (void)loadNewDataMethod {
+    UIAlertView *loadingAlert = [[UIAlertView alloc] initWithTitle:@"Information" 
+                                                           message:@"Do you want to dowload the latest data from server? (You have to start app again after update)"
+                                                          delegate:self cancelButtonTitle:@"NO" 
+                                                 otherButtonTitles:@"YES", nil];
+    loadingAlert.delegate = self;
+    [loadingAlert show];
+    [loadingAlert autorelease];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"do not download data");
+    } else {
+        [[Configuration shared] loadNewDataFromServer];
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -89,17 +84,6 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
-}
-
-- (void)loadNewDataMethod {
-    NSLog(@"GOT IT");
-    UIAlertView *loadingAlert = [[UIAlertView alloc] initWithTitle:@"Information" 
-                                                           message:@"Do you want to dowload the latest data from server?"
-                                                          delegate:self cancelButtonTitle:@"NO" 
-                                                 otherButtonTitles:@"YES", nil];
-    loadingAlert.delegate = self;
-    [loadingAlert show];
-    [loadingAlert autorelease];
 }
 
 - (void)dealloc

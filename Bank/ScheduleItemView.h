@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SchedulePersonView.h"
-#import "SBJson.h"
-#import "Data.h"
+#import "Configuration.h"
 
 @interface ScheduleItemView : UIViewController {
 

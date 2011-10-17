@@ -50,11 +50,12 @@
 
         itemAuthor.text = [array objectForKey:@"author"];
         itemCompany.text = [array objectForKey:@"company"];
-        itemDescription.text = [array objectForKey:@"description"];  
+        itemDescription.text = [array objectForKey:@"description"]; 
+        
 
-        SBJsonParser *parser = [SBJsonParser new];
-        NSDictionary *info = [[[parser objectWithString:DATA] objectForKey:@"authors"] objectForKey:[[array objectForKey:@"author"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-        [parser release];
+        NSDictionary *authors = [[[Configuration shared] data] objectForKey:@"authors"];
+        
+        NSDictionary *info = [authors objectForKey:[[array objectForKey:@"author"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
         
         if([[info objectForKey:@"author"] length] != 0) {
             [itemGoAuthor addTarget:self action:@selector(buttonClicked:) forControlEvents:(UIControlEvents)UIControlEventTouchDown];
@@ -76,10 +77,10 @@
         if([author length] != 0) {
             
             SchedulePersonView *itemView = [[SchedulePersonView alloc] initWithNibName:@"SchedulePersonView" bundle:nil];
-
-            SBJsonParser *parser = [SBJsonParser new];
-            itemView.array = [[[parser objectWithString:DATA] objectForKey:@"authors"] objectForKey:[author stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-            [parser release];
+            
+            
+            itemView.array = [[[[Configuration shared] data] objectForKey:@"authors"] objectForKey:[author stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+            
             
             if([[itemView.array objectForKey:@"author"] length] != 0) {
                 [self.navigationController pushViewController:itemView animated:YES];

@@ -54,7 +54,6 @@
 		445E49041446F38D0051E4F2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 445E48F81446F38D0051E4F2 /* SBJsonWriter.m */; };
 		445E4908144702340051E4F2 /* ScheduleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 445E4906144702330051E4F2 /* ScheduleCellView.m */; };
 		445E4909144702340051E4F2 /* ScheduleCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 445E4907144702340051E4F2 /* ScheduleCellView.xib */; };
-		445E490D144713F50051E4F2 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 445E490C144713F50051E4F2 /* Data.m */; };
 		449F6FFA1444987C00352724 /* MapViewControllerPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 449F6FF91444987C00352724 /* MapViewControllerPin.m */; };
 		449F6FFD14449C9700352724 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 449F6FFB14449C9600352724 /* Localizable.strings */; };
 		44B480181444325B004F5DD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B480171444325B004F5DD5 /* UIKit.framework */; };
@@ -104,6 +103,8 @@
 		44F5A3FD14443A7A0017D4A7 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3F814443A7A0017D4A7 /* Map.png */; };
 		44F5A3FF14443A7A0017D4A7 /* Partners.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3FA14443A7A0017D4A7 /* Partners.png */; };
 		712D6AF01448A8AD001EA970 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5A3BA144434140017D4A7 /* ScheduleViewController.m */; };
+		71B36A0A144C64D500E6DFBA /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = 71B36A09144C64D500E6DFBA /* index.json */; };
+		71B36A0F144C667B00E6DFBA /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B36A0E144C667B00E6DFBA /* Configuration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,8 +173,6 @@
 		445E4905144702330051E4F2 /* ScheduleCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCellView.h; sourceTree = "<group>"; };
 		445E4906144702330051E4F2 /* ScheduleCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCellView.m; sourceTree = "<group>"; };
 		445E4907144702340051E4F2 /* ScheduleCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleCellView.xib; sourceTree = "<group>"; };
-		445E490B144713F50051E4F2 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		445E490C144713F50051E4F2 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		449F6FF81444987C00352724 /* MapViewControllerPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewControllerPin.h; sourceTree = "<group>"; };
 		449F6FF91444987C00352724 /* MapViewControllerPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewControllerPin.m; sourceTree = "<group>"; };
 		449F6FFC14449C9700352724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -233,6 +232,9 @@
 		44F5A3F714443A7A0017D4A7 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		44F5A3F814443A7A0017D4A7 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		44F5A3FA14443A7A0017D4A7 /* Partners.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Partners.png; sourceTree = "<group>"; };
+		71B36A09144C64D500E6DFBA /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
+		71B36A0D144C667B00E6DFBA /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		71B36A0E144C667B00E6DFBA /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,8 +325,7 @@
 		445E490A144713F50051E4F2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				445E490B144713F50051E4F2 /* Data.h */,
-				445E490C144713F50051E4F2 /* Data.m */,
+				71B36A09144C64D500E6DFBA /* index.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -361,6 +362,7 @@
 		44B4801D1444325B004F5DD5 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
+				71B36A0C144C660700E6DFBA /* Classes */,
 				445E490A144713F50051E4F2 /* Data */,
 				445E2D8C1446365B0014E8F3 /* About */,
 				44EB7B61144835BF00521536 /* Participants */,
@@ -469,6 +471,15 @@
 				44DCCDCD14486F550038AF66 /* Schedule@2x.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		71B36A0C144C660700E6DFBA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				71B36A0D144C667B00E6DFBA /* Configuration.h */,
+				71B36A0E144C667B00E6DFBA /* Configuration.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,6 +599,7 @@
 				44DCCDCE14486F550038AF66 /* Schedule.png in Resources */,
 				44DCCDCF14486F550038AF66 /* Schedule@2x.png in Resources */,
 				44DCCDD114486F6D0038AF66 /* 3_uamaster.jpg in Resources */,
+				71B36A0A144C64D500E6DFBA /* index.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,10 +632,10 @@
 				445E49031446F38D0051E4F2 /* SBJsonUTF8Stream.m in Sources */,
 				445E49041446F38D0051E4F2 /* SBJsonWriter.m in Sources */,
 				445E4908144702340051E4F2 /* ScheduleCellView.m in Sources */,
-				445E490D144713F50051E4F2 /* Data.m in Sources */,
 				44152A121447730400C95F98 /* ScheduleItemView.m in Sources */,
 				44EB7B5E1448320600521536 /* SchedulePersonView.m in Sources */,
 				712D6AF01448A8AD001EA970 /* ScheduleViewController.m in Sources */,
+				71B36A0F144C667B00E6DFBA /* Configuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +712,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -717,7 +729,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

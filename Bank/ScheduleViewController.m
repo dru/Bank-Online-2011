@@ -9,7 +9,6 @@
 #import "ScheduleViewController.h"
 #import "ScheduleCellView.h"
 #import "ScheduleItemView.h"
-#import "Data.h"
 
 @implementation ScheduleViewController
 
@@ -79,10 +78,9 @@
                 break;
         }
 
-        SBJsonParser *parser = [SBJsonParser new];
-        self.data = [[[parser objectWithString:DATA] objectForKey:@"data"] objectForKey:self.currentDate];
-        [parser release];
-        //#NSLog(@"%@", parser.error);        
+        self.data = [[[[Configuration shared] data] objectForKey:@"data"] objectForKey:self.currentDate];
+        
+        //#NSLog(@"%@", parser.error);
         
         [tblTable reloadData];
     }

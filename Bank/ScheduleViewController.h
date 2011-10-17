@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SBJson.h"
+#import "Configuration.h"
 #import "ScheduleCellView.h"
 #import "ScheduleItemView.h"
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Configuration.h"
 
 @interface BankAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
 
