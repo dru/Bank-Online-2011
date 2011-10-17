@@ -93,7 +93,6 @@
 		44EB7B7F144835BF00521536 /* shevchenko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44EB7B6F144835BF00521536 /* shevchenko.jpg */; };
 		44EB7B80144835BF00521536 /* sidelev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44EB7B70144835BF00521536 /* sidelev.jpg */; };
 		44EB7B81144835BF00521536 /* verayakovleva_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44EB7B71144835BF00521536 /* verayakovleva_photo.jpg */; };
-		44F5A3BC144434140017D4A7 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5A3BA144434140017D4A7 /* ScheduleViewController.m */; };
 		44F5A3BD144434140017D4A7 /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3BB144434140017D4A7 /* ScheduleViewController.xib */; };
 		44F5A3D3144438540017D4A7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5A3D1144438540017D4A7 /* MapViewController.m */; };
 		44F5A3D71444386E0017D4A7 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3D51444386E0017D4A7 /* MapViewController.xib */; };
@@ -104,6 +103,7 @@
 		44F5A3FC14443A7A0017D4A7 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3F714443A7A0017D4A7 /* About.png */; };
 		44F5A3FD14443A7A0017D4A7 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3F814443A7A0017D4A7 /* Map.png */; };
 		44F5A3FF14443A7A0017D4A7 /* Partners.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5A3FA14443A7A0017D4A7 /* Partners.png */; };
+		712D6AF01448A8AD001EA970 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5A3BA144434140017D4A7 /* ScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -600,7 +600,6 @@
 			files = (
 				44B480241444325B004F5DD5 /* main.m in Sources */,
 				44B480281444325B004F5DD5 /* BankAppDelegate.m in Sources */,
-				44F5A3BC144434140017D4A7 /* ScheduleViewController.m in Sources */,
 				44F5A3D3144438540017D4A7 /* MapViewController.m in Sources */,
 				44F5A3DF144439040017D4A7 /* PartnersViewController.m in Sources */,
 				44F5A3E6144439230017D4A7 /* AboutViewController.m in Sources */,
@@ -624,6 +623,7 @@
 				445E490D144713F50051E4F2 /* Data.m in Sources */,
 				44152A121447730400C95F98 /* ScheduleItemView.m in Sources */,
 				44EB7B5E1448320600521536 /* SchedulePersonView.m in Sources */,
+				712D6AF01448A8AD001EA970 /* ScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +700,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -717,7 +717,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -733,6 +733,7 @@
 				INFOPLIST_FILE = "Bank/Bank Online 2011-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Bank Online 2011";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -746,6 +747,7 @@
 				INFOPLIST_FILE = "Bank/Bank Online 2011-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Bank Online 2011";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
